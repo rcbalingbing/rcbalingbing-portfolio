@@ -10,7 +10,7 @@ const MainLayout = () => {
             
             <Topbar />
 
-            <main className="mx-auto w-full flex-1 px-6 py-8">
+            <main className="mx-auto w-full max-w-[1600px] flex justify-center flex-1 px-6 pt-14 md:pt-20">
                 <Outlet />
             </main>
 
