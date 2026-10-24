@@ -1,5 +1,10 @@
 
+import { NavLink } from "react-router";
 import type { Route } from "./+types/home";
+
+import EXPERIENCES from "~/data/experciences";
+import ExperienceList from "~/components/experciences/experience-list";
+import ExperienceItem from "~/components/experciences/experience-item";
 
 import { SiGithub, SiGitlab, SiGmail, SiHuggingface } from "@icons-pack/react-simple-icons";
 
@@ -109,17 +114,8 @@ const Home = () => {
             {/* # main portfolio content */}
             <div className="flex min-w-0 flex-col gap-y-6">
 
-                {/* # experiece */}
-                <section className="rounded-lg border border-gray-400/60 p-6">
-                    <h2 className="font-semibold">experience</h2>
-
-                    <div className="mt-6">
-                        {/* # experiences */}
-                    </div>
-                </section>
-
                 {/* # tech stacks */}
-                <section className="rounded-lg border border-gray-400/60 p-6">
+                <section className="p-6">
                     <h2 className="font-semibold">tech stacks</h2>
 
                     <div className="mt-6">
@@ -128,7 +124,7 @@ const Home = () => {
                 </section>
 
                 {/* # projects */}
-                <section className="rounded-lg border border-gray-400/60 p-6">
+                <section className="p-6">
                     <h2 className="font-semibold">projects</h2>
 
                     <div className="mt-6">
@@ -136,8 +132,23 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* # experiece */}
+                <section className="p-2 md:p-6 lg:p-6">
+                    
+                    <section className="flex justify-between">
+                        <h2 className="font-semibold text-sm">experience</h2>
+                        <NavLink to="/" className="text-xs underline text-gray-600 hover:text-black"> more </NavLink>
+                    </section>
+
+                    <ExperienceList>
+                        <ExperienceItem year="2026" role="Volunteer Developer & Maintainer" company="BetterMalinao" is_first_item={true} />
+                        <ExperienceItem year="2026" role="Intern" company="Bicol Univeristy" />
+                        <ExperienceItem year="2025 - 2026" role="Frontend Developer" company="Albay Reality" />
+                    </ExperienceList>
+                </section>
+
                 {/* # certifications */}
-                <section className="rounded-lg border border-gray-400/60 p-6">
+                <section className="p-6">
                     <h2 className="font-semibold">certifications</h2>
 
                     <div className="mt-6">
