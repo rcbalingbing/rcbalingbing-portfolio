@@ -33,7 +33,7 @@ const NAVIGATION_LINKS = [
     }
 ] as const;
 
-const Topbar = () => {
+const Navbar = () => {
 
     // # handles sidebar visibility
     const [ is_sidebar_open, setIsSidebarOpen ] = useState<boolean>(false);
@@ -182,4 +182,4 @@ const Topbar = () => {
 
 }
 
-export default Topbar;
+export default Navbar;
