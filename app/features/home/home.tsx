@@ -6,6 +6,9 @@ import EXPERIENCES from "~/data/experciences";
 import ExperienceList from "~/components/experciences/experience-list";
 import ExperienceItem from "~/components/experciences/experience-item";
 
+import SocialLinkList from "~/components/social-links/social-link-list";
+import SocialLinkItem from "~/components/social-links/social-link-item";
+
 import { SiGithub, SiGitlab, SiGmail, SiHuggingface } from "@icons-pack/react-simple-icons";
 
 export function meta({}: Route.MetaArgs) {
@@ -50,64 +53,27 @@ const Home = () => {
                 <div className="h-[0.5px] my-8 w-full bg-gray-200"></div>
 
                 {/* # socials and contact info */}
-                <section className="flex flex-col gap-y-4 px-8 md:px-16 lg:px-16 text-gray-600">
+                <SocialLinkList>
+                    <SocialLinkItem icon={<SiGithub className="w-4" />} href="https://github.com/rcbalingbing">
+                        github.com/rcbalingbing
+                    </SocialLinkItem>
 
-                    <section className="flex items-center gap-x-2">
-                        <SiGithub className="w-4 shrink-0" />
-                        <a
-                            href="https://github.com/rcbalingbing"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="min-w-0 break-all text-xs hover:text-black"
-                        >
-                            github.com/rcbalingbing
-                        </a>
-                    </section>
+                    <SocialLinkItem icon={<SiGitlab className="w-4" />} href="https://gitlab.com/rcbalingbing">
+                        gitlab.com/rcbalingbing
+                    </SocialLinkItem>
 
-                    <section className="flex items-center gap-x-2">
-                        <SiGitlab className="w-4 shrink-0" />
-                        <a
-                            href="https://gitlab.com/rcbalingbing"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="min-w-0 break-all text-xs hover:text-black"
-                        >
-                            gitlab.com/rcbalingbing
-                        </a>
-                    </section>
+                    <SocialLinkItem icon={<SiHuggingface className="w-4" />} href="https://huggingface.co/rcbalingbing">
+                        huggingface.co/rcbalingbing
+                    </SocialLinkItem>
 
-                    <section className="flex items-center gap-x-2">
-                        <SiHuggingface className="w-4 shrink-0" />
-                        <a
-                            href="https://huggingface.co/rcbalingbing"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="min-w-0 break-all text-xs hover:text-black"
-                        >
-                            huggingface.co/rcbalingbing
-                        </a>
-                    </section>
+                    <SocialLinkItem icon={<SiGmail className="w-4" />} href="mailto:dev.rcbalingbing@gmail.com">
+                        dev.rcbalingbing@gmail.com
+                    </SocialLinkItem>
 
-                    <section className="flex items-center gap-x-2">
-                        <SiGmail className="w-4 shrink-0" />
-                        <a
-                            href="mailto:dev.rcbalingbing@gmail.com"
-                            className="min-w-0 break-all text-xs hover:text-black"
-                        >
-                            dev.rcbalingbing@gmail.com
-                        </a>
-                    </section>
-
-                    <section className="flex items-center gap-x-2">
-                        <SiGmail className="w-4 shrink-0" />
-                        <a
-                            href="mailto:rcb2023-9793-64187@bicol-u.edu.ph"
-                            className="min-w-0 break-all text-xs hover:text-black"
-                        >
-                            rcb2023-9793-64187@bicol-u.edu.ph
-                        </a>
-                    </section>
-                </section>
+                    <SocialLinkItem icon={<SiGmail className="w-4" />} href="mailto:rcb2023-9793-64187@bicol-u.edu.ph">
+                        rcb2023-9793-64187@bicol-u.edu.ph
+                    </SocialLinkItem>
+                </SocialLinkList>
 
             </aside>
 
