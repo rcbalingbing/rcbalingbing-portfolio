@@ -8,7 +8,7 @@ interface SocialLinkListProps {
 const SocialLinkList = ({ children }: SocialLinkListProps) => {
 
     return(
-        <ul className="flex flex-col gap-y-4 px-8 md:px-16 text-gray-600">
+        <ul className="flex flex-col gap-y-4 px-8 md:px-10 lg:px-10 text-gray-600">
             {children}
         </ul>
     );
