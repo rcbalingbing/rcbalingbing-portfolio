@@ -18,12 +18,42 @@ import { SiGithub, SiGitlab, SiGmail, SiHuggingface } from "@icons-pack/react-si
 
 export function meta({}: Route.MetaArgs) {
 
+    const url = "https://rcbalingbing.com/";
+    const title = "RCBalingbing";
+    const description = "Full-stack and ML developer and CS student at Bicol University. I build with React, Laravel and TypeScript, as well as MySQL and PostgreSQL. I also maintain BetterMalinao.";
+
+
     return [
-        { title: "RCBalingbing" },
+        { title },
+        { name: "description", content: description },
+        { tagName: "link", rel: "canonical", href: url },
+
+        { property: "og:type", content: "profile" },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:image", content: `${url}profile/marci-wackyy.png` },
+        { name: "twitter:card", content: "summary_large_image" },
+
         {
-            name: "description",
-            content: "Welcome to my portfolio"
-        }
+          "script:ld+json": {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Raymond C. Balingbing",
+            alternateName: "rcbalingbing",
+            url,
+            image: `${url}profile/marci-wackyy.png`,
+            jobTitle: "Fullstack and AI/ML Developer",
+            alumniOf: { "@type": "CollegeOrUniversity", name: "Bicol University" },
+            knowsAbout: ["React", "TypeScript", "Laravel", "PHP", "MySQL", "PostgreSQL", "Kotlin", "YOLOv11", "Deep Learning", "CNN", "RAG", "LLM", "AWS", "Frontend Development", "Backend Development"],
+            sameAs: [
+              "https://github.com/rcbalingbing",
+              "https://gitlab.com/rcbalingbing",
+              "https://huggingface.co/rcbalingbing",
+              "https://www.facebook.com/ray.cabarlo"
+            ],
+          },
+        },
     ];
 }
 
