@@ -19,7 +19,7 @@ const PortfolioSection = ({ title, children, details }: PortfolioSectionProps) =
 
                 {details && (
                     <NavLink to={details} className="text-xs text-gray-600 underline hover:text-black">
-                        details
+                        view more
                     </NavLink>
                 )}
             </div>
