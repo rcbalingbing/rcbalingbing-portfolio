@@ -1,5 +1,4 @@
 
-import { NavLink } from "react-router";
 import type { Route } from "./+types/home";
 
 import EXPERIENCES from "~/data/experciences";
@@ -13,6 +12,10 @@ import PortfolioSection from "~/components/sections/portfolio-section";
 
 import EducationAndCertificationsList from "~/components/educ-certs/EducationAndCerticationList";
 import EducationAndCertificationsItem from "~/components/educ-certs/EducationAndCerticationItem";
+
+import ProjectsSection from "./projects-section";
+
+import test_logo from "/profile/marci-wackyy.png";
 
 import { SiGithub, SiGitlab, SiGmail, SiHuggingface } from "@icons-pack/react-simple-icons";
 
@@ -110,8 +113,8 @@ const Home = () => {
                 </PortfolioSection>
 
                 {/* # projects */}
-                <PortfolioSection title="projects">
-                    <p>Projects</p>
+                <PortfolioSection title="projects" details="link">
+                    <ProjectsSection />
                 </PortfolioSection>
 
                 {/* # experiece */}
@@ -124,11 +127,11 @@ const Home = () => {
                 </PortfolioSection>
 
                 {/* # education and certifications */}
-                <PortfolioSection title="education & certifications">
+                <PortfolioSection title="education & certifications" details="link">
                     <EducationAndCertificationsList>
-                        <EducationAndCertificationsItem variant="scholarship" name="Junior Level Science Scholarship" year="2025-2027" issuer="DOST-SEI, PH" logo="public/logo/dost-sei-logo.png" link_verification="test" />
-                        <EducationAndCertificationsItem variant="education" name="BS Computer Science" year="2023 - 2026" issuer="Bicol University, College of Science, PH" logo="public/logo/bicol-university-logo.png" link_verification="test" />
-                        <EducationAndCertificationsItem variant="certification" name="Data Visualization Workshop" year="May 2025" issuer="Zuitt Coding Bootcamp" logo="public/logo/zuitt-co-logo.png" link_verification="test" />
+                        <EducationAndCertificationsItem variant="scholarship" name="Junior Level Science Scholarship" year="2025-2027" issuer="DOST-SEI, PH" logo="/logo/dost-sei-logo.png" link_verification="test" />
+                        <EducationAndCertificationsItem variant="education" name="BS Computer Science" year="2023 - 2026" issuer="Bicol University, College of Science, PH" logo="/logo/bicol-university-logo.png" link_verification="test" />
+                        <EducationAndCertificationsItem variant="certification" name="Data Visualization Workshop" year="May 2025" issuer="Zuitt Coding Bootcamp" logo="/logo/zuitt-co-logo.png" link_verification="test" />
                     </EducationAndCertificationsList>
                 </PortfolioSection>
 
