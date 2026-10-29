@@ -105,7 +105,7 @@ const Home = () => {
             </aside>
 
             {/* # main portfolio content */}
-            <div className="flex min-w-0 flex-col gap-y-6">
+            <div className="flex min-w-0 flex-col gap-y-16 md:gap-y-8 lg:gap-y-8">
 
                 {/* # tech stacks */}
                 <PortfolioSection title="tech stacks">
@@ -120,7 +120,7 @@ const Home = () => {
                 {/* # experiece */}
                 <PortfolioSection title="experiences">
                     <ExperienceList>
-                        <ExperienceItem year="2026" role="Volunteer Developer & Maintainer" company="BetterMalinao" is_first_item={true} />
+                        <ExperienceItem year="2026-present" role="Volunteer Developer & Maintainer" company="BetterMalinao" is_first_item={true} />
                         <ExperienceItem year="2026" role="Intern" company="Bicol Univeristy" />
                         <ExperienceItem year="2025-2026" role="Frontend Developer" company="Albay Reality" />
                     </ExperienceList>
