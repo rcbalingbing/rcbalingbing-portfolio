@@ -13,13 +13,13 @@ const ExperienceItem = ({ year, role, company, is_first_item = false }: Experien
     return(
         <li className={`flex flex-col gap-y-2 border-b border-gray-400/20 py-3 font-sans md:flex-row lg:flex-row md:items-center lg:items-center md:gap-x-4 lg:gap-x-4 ${is_first_item ? "border-t" : ""}`}>
 
-            <h3 className="order-1 text-xs md:text-sm lg:text-sm font-semibold md:order-2 lg:order-2 md:flex-1 lg:flex-1 text-gray-600">
+            <h3 className="order-1 text-xs md:text-sm lg:text-sm font-semibold md:order-2 lg:order-2 md:flex-1 lg:flex-1 text-gray-800">
                 {role}
             </h3>
 
             <div className="order-2 flex items-center gap-x-2 text-xs md:text-sm lg:text-sm text-gray-600/80 md:contents">
 
-                <h4 className="md:order-1 lg:order-1 md:w-1/7 lg:w-1/7 font-mono">
+                <h4 className="md:order-1 lg:order-1 md:w-1/6 lg:w-1/6 font-mono">
                     {year}
                 </h4>
 
