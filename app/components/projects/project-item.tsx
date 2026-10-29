@@ -15,7 +15,7 @@ const ProjectItem = ({logo_path, title, date, type, categories, abstract, tools,
             </section>
 
             <section className="flex justify-between pt-4 pb-2 items-center">
-                <time className="text-xs text-gray-800">{date}</time>
+                <time className="text-xs text-gray-800 font-mono">{date}</time>
                 <h4 className="border border-gray-200 rounded-md text-xs px-2 py-1">{type}</h4>
             </section>
 
@@ -31,12 +31,12 @@ const ProjectItem = ({logo_path, title, date, type, categories, abstract, tools,
 
             <section className="flex gap-x-2 items-center pb-6">
                 
-                <NavLink to={demo_link} className="flex-1 bg-gray-800 text-gray-200 py-2 px-4 rounded border border-gray-800 text-xs md:text-sm lg:text-sm flex justify-center items-center gap-x-2 hover:bg-gray-800/80 hover:text-gray-100">
+                <NavLink to={demo_link} className="flex-1 bg-gray-800 text-gray-200 py-2 px-4 rounded border border-gray-800 text-xs md:text-sm lg:text-sm flex justify-center items-center gap-x-2 hover:bg-gray-800/80 hover:text-gray-100 transition-colors">
                     <span>view project</span>
                     <ArrowLongRightIcon className="w-4" />
                 </NavLink>
                 
-                <a href={github_link} target="_blank" rel="noreferrer" className="border border-gray-400/40 rounded px-4 py-2 flex gap-x-2 items-center text-xs md:text-sm lg:text-sm text-gray-800 cursor-pointer hover:bg-gray-100 hover:border-gray-400/20">
+                <a href={github_link} target="_blank" rel="noreferrer" className="border border-gray-400/40 rounded px-4 py-2 flex gap-x-2 items-center text-xs md:text-sm lg:text-sm text-gray-800 cursor-pointer hover:bg-gray-100 hover:border-gray-400/20 transition-colors">
                     <SiGithub className="w-4 h-4"/>
                     <span>GitHub</span>
                 </a>
