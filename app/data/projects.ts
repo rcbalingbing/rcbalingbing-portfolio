@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
         title: "BetterMalinao",
         date: "2026",
         type: "web-app",
-        categories: ["featured", "open-sourced"],
+        categories: ["featured", "open-sourced", "contributed"],
         abstract: "An open-source, community-driven initiative inspired by BetterGov.ph, building accessible digital tools to promote transparency, and citizen participation.",
         tools: ["React", "TypeScript"],
         demo_link: "bettermalinao.vercel.app",
